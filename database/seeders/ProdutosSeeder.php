@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Produto; // Importe a classe Produto aqui
 
 class ProdutosSeeder extends Seeder
 {
@@ -15,8 +16,8 @@ class ProdutosSeeder extends Seeder
         Produto::create(
 
             [
-                'nome' => 'NOTEBOOK LG',
-                'valor' => '2000.00'
+                'nome' => 'Teclado Multilaser Bletooh',
+                'valor' => '100.00'
             ]
 
         );

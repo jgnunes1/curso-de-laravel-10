@@ -9,7 +9,7 @@
 
 
   <div >
-            <form action="" method="get">
+            <form action="{{route('produto.index')}}" method="get">
 				<input type="text" name="pesquisar" placeholder="Digite o Produto"/>
 				<button class="btn btn-primary">Pesquisar</button>
 

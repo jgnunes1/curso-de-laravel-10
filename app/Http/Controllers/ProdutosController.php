@@ -7,12 +7,25 @@ use App\Models\Produto;
 
 class ProdutosController extends Controller
 {
-    public function index()
-    {
-        $findProduto = Produto::all();
+    private $produto;
 
-        //dd($findProduto); //verificando se está retornando dados.
+    public function __construct(Produto $produto)
+    {
+        $this->produto = $produto;
+    }
+
+    public function index(Request $request)
+    {
+        $findProduto = $this->produto::all();
 
         return view('pages.produtos.paginacao', compact('findProduto'));
+    }
+
+    public function destroy($id)
+    {
+        $produto = $this->produto->findOrFail($id);
+        $produto->delete();
+
+        return redirect()->route('produtos.index')->with('success', 'Produto excluído com sucesso.');
     }
 }

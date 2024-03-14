@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RecentUpdateController;
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\PostController;
 
@@ -42,5 +43,9 @@ Route::get('/', [PostController::class, 'index'])->name('home');
 
 Route::get('/', function () { return view('home');
 });
+
+//acesso ao banco de dados
+Route::get('/recent-updates', [RecentUpdateController::class, 'index'])->name('recent_updates');
+
 
 

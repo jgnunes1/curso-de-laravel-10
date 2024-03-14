@@ -16,11 +16,15 @@ class ProdutosController extends Controller
 
     public function index(Request $request)
     {
-        $findProduto = $this->produto::all();
+        //dd($request); //testar se pesquisa está passando informação
+       $pesquisar = $request->pesquisar;
+       //dd($pesquisar); // testar se $pesquisar está recebendo dados do $request
+
+       $findProduto = $this->produto->getProdutosPesquisarIndex();
 
         return view('pages.produtos.paginacao', compact('findProduto'));
     }
-
+//apagar produto
     public function destroy($id)
     {
         $produto = $this->produto->findOrFail($id);

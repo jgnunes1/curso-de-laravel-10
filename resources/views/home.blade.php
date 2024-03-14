@@ -6,7 +6,7 @@
     <div class="container">
     <div class="jumbotron">
         <h1>Sistema de Gestão</h1>
-        <p>Confira as últimas postagens:</p>
+        <p>Gestão de conteudo e produtos</p>
 
          <div class="list-group">
 

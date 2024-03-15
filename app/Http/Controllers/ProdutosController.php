@@ -23,12 +23,9 @@ class ProdutosController extends Controller
 
         return view('pages.produtos.paginacao', compact('findProduto'));
     }
-//apagar produto
-  /**  public function destroy($id)
-    {
-        $produto = $this->produto->findOrFail($id);
-        $produto->delete();
 
-        return redirect()->route('produtos.index')->with('success', 'Produto excluído com sucesso.');
-    }**/
+public function delete(Request $request)
+    {
+      
+    }
 }

@@ -201,10 +201,17 @@
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('js/chart.umd.js')}}" ></script>
 <script src="{{asset('js/dashboard.js')}}"></script></body>
 <script src="{{asset('js/color-modes.js')}}"></script>
+{{-- BlocUI loading --}}
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+ 
+ <script src="/js/projeto.js"></script>
+
 
 </html>
 
+ 

@@ -21,6 +21,13 @@
             </form>
 
             <div class="table-responsive small mt-4">
+
+                @if ($findProduto->isEmpty())
+
+                    <p>Não há produtos</p>
+
+                @else
+
                 <table class="table table-striped table-sm">
                     <thead>
                     <tr>
@@ -31,6 +38,7 @@
                     </tr>
                     </thead>
                     <tbody>
+
                     	@foreach ($findProduto as $produto)
 
                      <tr>
@@ -43,7 +51,7 @@
                         <td>
 
                             <a href="" class="btn btn-light btn-sm"> Editar </a>
-                            <a href="" class="btn btn-danger btn-sm"> Excluir </a>
+                            <a onclick="deleteRegistrPaginacao( '{{route('produto.delete')}}', {{$produto->id}} )" class="btn btn-danger btn-sm"> Excluir </a>
                         </td>
                         
                     </tr>
@@ -52,6 +60,8 @@
                                   
                     </tbody>
                 </table> 
+
+                @endif
             </div>
 
     </div>

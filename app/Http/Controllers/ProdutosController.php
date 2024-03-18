@@ -16,16 +16,16 @@ class ProdutosController extends Controller
 
     public function index(Request $request)
     {
-        //dd($request); //testar se pesquisa está passando informação
+                                       // dd($request); //testar se pesquisa está passando informação
        $pesquisar = $request->pesquisar;
-       //dd($pesquisar); // testar se $pesquisar está recebendo dados do $request
-       $findProduto = $this->produto->getProdutosPesquisarIndex(search: $pesquisar);
+                                     // dd($pesquisar); // testar se $pesquisar está recebendo dados do $request
+       $findProduto = $this->produto->getProdutosPesquisarIndex(search: $pesquisar ?? '');
 
         return view('pages.produtos.paginacao', compact('findProduto'));
     }
 
-public function delete(Request $request)
+    public function delete(Request $request)
     {
-      
+      return response()->json(['success'=>true]);
     }
 }

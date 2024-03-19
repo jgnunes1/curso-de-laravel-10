@@ -53,7 +53,7 @@
                             <a href="" class="btn btn-light btn-sm"> Editar </a>
 
                             <meta name='csrf-token' content="{{ csrf_token() }}"/>
-                            <a onclick="deleteRegistrPaginacao( '{{route('produto.delete')}}', {{$produto->id}} )" class="btn btn-danger btn-sm"> Excluir </a>
+                            <a onclick="deleteRegistroPaginacao( '{{route('produto.delete')}}', {{$produto->id}} )" class="btn btn-danger btn-sm"> Excluir </a>
                         </td>
                         
                     </tr>

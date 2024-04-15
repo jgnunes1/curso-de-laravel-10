@@ -14,8 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/', function () {  return view('index');
 });
 
 //Produtos --
@@ -39,10 +38,6 @@ Route::put('/posts/{id}', [PostController::class, 'update'])->name('posts.update
 Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 Route::get('/', [PostController::class, 'index'])->name('home');
 
-//Primeira página
-
-Route::get('/', function () { return view('home');
-});
 
 //acesso ao banco de dados
 Route::get('/recent-updates', [RecentUpdateController::class, 'index'])->name('recent_updates');
